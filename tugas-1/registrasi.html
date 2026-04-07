@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARRVELCUP PUBGM FAST TOUR 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="header-nav">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo FARRVEL">
+            </a>
+            <nav>
+                <span>REGISTER SQUAD</span>
+                <span>|</span>
+                <span class="muted">RULEBOOK</span>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>FARRVELCUP PUBGM FAST TOUR 2026</h1>
+            <p>Buktikkan Kekompakan Skuadmu di Medan Tempur Erangel!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content-block">
+            <section class="card registration-card">
+                <h2>Registrasi Skuad</h2>
+                <div class="tabs">
+                    <button class="tab-btn inactive" data-tab="join">GABUNG KE TIM</button>
+                    <button class="tab-btn active" data-tab="create">BENTUK TIM</button>
+                    <button class="tab-btn inactive" data-tab="find">CARI TIM</button>
+                </div>
+                
+                <div class="tab-content" id="create-team-content">
+                    <form id="registrationForm">
+                        <div class="input-group">
+                            <label for="teamName">Nama Tim*</label>
+                            <input type="text" id="teamName" placeholder="Contoh: Tim Juara Nusantara" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Privasi Tim</label>
+                            <div class="radio-group">
+                                <label class="radio-container">Publik
+                                    <input type="radio" checked="checked" name="privacy" value="public">
+                                    <span class="checkmark"></span>
+                                </label>
+                                    <label class="radio-container">Pribadi
+                                    <input type="radio" name="privacy" value="private">
+                                <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="moto">Moto Tim</label>
+                            <input type="text" id="moto" placeholder="Moto singkat timmu (opsional)">
+                        </div>
+
+                        <hr class="divider">
+                        <h3>Daftar Roster (4 Inti, 1 Cadangan)</h3>
+
+                        <div class="player-card captain-card">
+                            <h4>Pemain 1 (Kapten)*</h4>
+                            <div class="input-grid">
+                                <input type="text" id="p1-name" placeholder="Nama Asli" required>
+                                <input type="text" id="p1-ign" placeholder="Nickname / IGN" required>
+                                <input type="number" id="p1-id" placeholder="ID PUBG (Angka)" required>
+                                <input type="text" id="p1-discord" placeholder="Discord (#1234)" required>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <h4>Pemain 2*</h4>
+                            <div class="input-grid">
+                                <input type="text" id="p2-name" placeholder="Nama Asli" required>
+                                <input type="text" id="p2-ign" placeholder="Nickname / IGN" required>
+                                <input type="number" id="p2-id" placeholder="ID PUBG (Angka)" required>
+                                <input type="text" id="p2-discord" placeholder="Discord (#1234)" required>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <h4>Pemain 3*</h4>
+                            <div class="input-grid">
+                                <input type="text" id="p3-name" placeholder="Nama Asli" required>
+                                <input type="text" id="p3-ign" placeholder="Nickname / IGN" required>
+                                <input type="number" id="p3-id" placeholder="ID PUBG (Angka)" required>
+                                <input type="text" id="p3-discord" placeholder="Discord (#1234)" required>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <h4>Pemain 4*</h4>
+                            <div class="input-grid">
+                                <input type="text" id="p4-name" placeholder="Nama Asli" required>
+                                <input type="text" id="p4-ign" placeholder="Nickname / IGN" required>
+                                <input type="number" id="p4-id" placeholder="ID PUBG (Angka)" required>
+                                <input type="text" id="p4-discord" placeholder="Discord (#1234)" required>
+                            </div>
+                        </div>
+
+                        <div id="substitute-container"></div>
+
+                        <div class="roster-actions">
+                            <button type="button" id="addPlayerBtn" class="btn-outline">+ Tambah Pemain Cadangan</button>
+                            <button type="button" id="removePlayerBtn" class="btn-outline btn-danger hidden">- Hapus Pemain Cadangan</button>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Daftarkan Skuad</button>
+                        <p id="formMessage" class="hidden message"></p>
+                    </form>
+                </div>
+
+                <div class="tab-content hidden" id="join-team-content">
+                    <p>Fitur untuk bergabung ke tim akan segera hadir.</p>
+                </div>
+                
+                <div class="tab-content hidden" id="find-team-content">
+                    <p>Fitur untuk mencari tim akan segera hadir.</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Registered Squads</h2>
+                <ul id="squadList" class="squad-list">
+                    <li class="empty-state">Belum ada skuad yang terdaftar. Skuadmu bisa jadi yang pertama!</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FARRVELCUP Esports Tournament. Dibuat dengan 🔥 untuk tugas GDGoC ITS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
